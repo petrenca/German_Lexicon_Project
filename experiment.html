@@ -674,7 +674,7 @@
             trial_duration: 500
           };
 
-          // Feedback pause every 5 trials
+          // Feedback pause every 100 trials
           function create_feedback_break(block_size, trial_num, total_trials) {
             const progress = Math.round((trial_num / total_trials) * 100);
             return {
@@ -788,16 +788,26 @@
     <div style="text-align: left;padding-left: 50px;font-size: 24px;">
 
       <p>Wie alt sind Sie?</p>
-      <input type="text" name="age" id="origin-input" required style="width: 100%;"><br><br>
+      <input type="text" name="age" id="age_input" required style="width: 100%;"><br><br>
 
+     
       <p>In welchem Land sind Sie aufgewachsen?</p>
-      <input type="text" name="origin_region" id="origin-input" required style="width: 100%;"><br><br>
+      <input type="text" name="origin_region" id="origin_input" required style="width: 100%;"><br><br>
 
-      <p>Wie lauten die ersten zwei Ziffern der Postleitzahl?</p>
-      <input type="text" name="origin_region" id="origin-input" required style="width: 100%;"><br><br>
+      <p>Falls Sie in der vorherigen Frage Deutschland, Österreich oder die Schweiz angegeben haben:
+         Wie lautet die Postleitzahl des Ortes, in dem Sie aufgewachsen sind?
+      <i>(Hinweis: fünfstellig für Deutschland, vierstellig für Österreich und die Schweiz)</i></p>
+      <input type="text" name="PLZ_origin_region" id="PLZ_origin_input" required style="width: 100%;"><br><br>
 
-      <p>An welchem Ort nehmen Sie an dieser Studie teil?</p>
-      <input type="text" name="site" required style="width: 100%;"><br><br>
+      <p>In welchem Land nehmen nehmen Sie an dieser Studie teil?</p>
+      <input type="text" name="site" id="site_input" required style="width: 100%;"><br><br>
+
+      <p>Falls Sie in der vorherigen Frage Deutschland, Österreich oder die Schweiz angegeben haben:
+         Wie lautet die Postleitzahl des Ortes, an dem Sie an der Studie teilnehmen?</p>
+      <i>(Hinweis: fünfstellig für Deutschland, vierstellig für Österreich und die Schweiz)</i></p>
+      <input type="text" name="PLZ_site" id="PLZ_site_input" required style="width: 100%;"><br><br>
+
+
 
     </div>
   `
@@ -993,10 +1003,8 @@
           document.body.innerHTML = `<p><b>Fehler beim Laden der Einverständniserklärung.</b><br>${error.message}</p>`;
         });
     }
+  };
 
-  }
-  //}
-  ;
 </script>
 
 </html>
