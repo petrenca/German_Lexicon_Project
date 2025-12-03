@@ -1,6 +1,6 @@
 {
   "default": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_default.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_default.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -11,7 +11,7 @@
     "2_individual_completion_sentence_text": null
   },
   "darmstadt": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_darmstadt.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_darmstadt.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung im Umfang von 1 Versuchspersonenstunde, sofern Sie an der Technischen Universität Darmstadt am Fachbereich Humanwissenschaften studieren.</p>",
     "1b_individual_data_protection": "no",
@@ -22,7 +22,7 @@
     "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://singuserb06d404a.fra1.qualtrics.com/jfe/form/SV_eWeYeD6IMszBCGW' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihren VP-Stundencode zu erhalten.</p>"
   },
   "muenster": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_muenster.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_muenster.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -33,7 +33,7 @@
     "2_individual_completion_sentence_text": null
   },
   "twente": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_twente.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_twente.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -44,7 +44,7 @@
     "2_individual_completion_sentence_text": null
   },
   "iu": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_iu.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_iu.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Versuchspersonenstunde gutgeschrieben. Bei vorzeitigem Abbruch erhalten Sie keine Vergütung.</p>",
     "1b_individual_data_protection": "yes",
@@ -55,7 +55,7 @@
     "2_individual_completion_sentence_text": null
   },
   "ipn": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_ipn.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_ipn.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Versuchspersonenstunde. Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung. Bitte setzen Sie sich hierzu mit dem Projektverantwortlichen der Studie in Kontakt.</p>",
     "1b_individual_data_protection": "no",
@@ -66,7 +66,7 @@
     "2_individual_completion_sentence_text": null
   },
   "bamberg": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_bamberg.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_bamberg.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -77,7 +77,7 @@
     "2_individual_completion_sentence_text": null
   },
   "leipzig": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_leipzig.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_leipzig.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 Versuchspersonenstunde pro Stunde. Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung. Bitte setzen Sie sich hierzu mit dem Projektverantwortlichen der Studie in Kontakt.</p>",
     "1b_individual_data_protection": "no",
@@ -88,7 +88,7 @@
     "2_individual_completion_sentence_text": null
   },
   "goettingen": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_goettingen.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_goettingen.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 Versuchspersonenstunde pro Stunde.</p>",
     "1b_individual_data_protection": "yes",
@@ -99,7 +99,7 @@
     "2_individual_completion_sentence_text": null
   },
   "dresden": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_dresden.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_dresden.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme Versuchspersonenstunden oder einen Gutschein von 10 Euro (Hugendubel oder Amazon).</p>",
     "1b_individual_data_protection": "yes",
@@ -110,7 +110,7 @@
     "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://www.psytoolkit.org/c/3.6.5/survey?s=LEZJ6' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihren VP-Stundencode zu erhalten.</p>"
   },
   "hildesheim": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_hildesheim.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_hildesheim.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -121,7 +121,7 @@
     "2_individual_completion_sentence_text": null
   },
   "fu": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_fu.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_fu.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe einer VP-Stunde. Die Vergütung wird Ihnen im SONA-System der FU bestätigt, wenn Sie die Studie vollständig bearbeitet haben. Bei Problemen informieren Sie bitte die Projektverantwortlichen der Studie.</p>",
     "1b_individual_data_protection": "yes",
@@ -132,7 +132,7 @@
     "2_individual_completion_sentence_text": null
   },
   "pavia": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_pavia.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_pavia.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -143,7 +143,7 @@
     "2_individual_completion_sentence_text": null
   },
   "hu": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_hu.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_hu.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -154,7 +154,7 @@
     "2_individual_completion_sentence_text": null
   },
   "tuebingen": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_tuebingen.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_tuebingen.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme entweder eine Aufwandsentschädigung in Höhe von 11,00 € pro Stunde oder eine entsprechende Anrechnung in Form von Versuchspersonenstunden (VP-Stunden). Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung bzw. Anrechnung. Bitte setzen Sie sich hierzu mit dem Projektverantwortlichen der Studie in Kontakt.</p>",
     "1b_individual_data_protection": "no",
@@ -165,7 +165,7 @@
     "2_individual_completion_sentence_text": null
   },
   "aachen": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_aachen.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_aachen.html",
     "1a_individual_complete_consent_form": "no", 
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von einer <strong>VP‑Stunde</strong>.</p>",
@@ -177,7 +177,7 @@
     "2_individual_completion_sentence_text": null
   },
   "lueneburg": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_lueneburg.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_lueneburg.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -188,7 +188,7 @@
     "2_individual_completion_sentence_text": null
   },
   "marburg": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_marburg.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_marburg.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -199,7 +199,7 @@
     "2_individual_completion_sentence_text": null
   },
   "ipu": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_ipu.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_ipu.html",
     "1a_individual_reimbursement": "no",
     "1a_individual_reimbursement_text": null,
     "1b_individual_data_protection": "no",
@@ -210,7 +210,7 @@
     "2_individual_completion_sentence_text": null
   },
   "erfurt": {
-    "0a_html_consent_form_location": "consent_forms/consent_form_erfurt.html",
+    "0_html_consent_form_location": "consent_forms/consent_form_erfurt.html",
     "1a_individual_reimbursement": "yes",
     "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 Versuchspersonenstunde pro Stunde.</p>",
     "1b_individual_data_protection": "no",

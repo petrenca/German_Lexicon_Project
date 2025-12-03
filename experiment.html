@@ -378,7 +378,7 @@
         })
         .then(mapping => {
           const uniData = mapping[uniParam];
-          if (!uniData || !uniData["0a_html_consent_form_location"]) {
+          if (!uniData || !uniData["0_html_consent_form_location"]) {
             document.body.innerHTML = `
       <div style="text-align:center; font-size: 20px; padding-top: 100px;">
         <p><b>Fehler:</b> Für diese Universität wurde keine Einverständniserklärung gefunden.</p>
@@ -393,7 +393,7 @@
           // Define informed_consent and personal_code_question here
           const informed_consent = {
             type: jsPsychExternalHtml,
-            url: uniData["0a_html_consent_form_location"],
+            url: uniData["0_html_consent_form_location"],
             cont_btn: "start",
             check_fn: check_consent
           };
