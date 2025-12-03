@@ -300,10 +300,10 @@ def determine_output_path(
       basename if present or the default filename.
 
     Note: This intentionally ignores any absolute/relative paths specified in
-    '0a_html_consent_form_location' beyond using their basename, so that all
+    '0_html_consent_form_location' beyond using their basename, so that all
     files end up next to the mapping (e.g. 'consent_forms') unless --outdir is used.
     """
-    configured_path = site_cfg.get("0a_html_consent_form_location")
+    configured_path = site_cfg.get("0_html_consent_form_location")
 
     # 1) Explicit output directory (CLI flag takes precedence)
     if outdir:
