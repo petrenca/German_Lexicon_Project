@@ -172,12 +172,12 @@ def perform_conditional_replacements(
     result_html = base_html
 
     # 1b: Reimbursement
-    reimburse_yes = str(site_cfg.get("1b_individual_reimbursement", "no")).lower() == "yes"
-    reimburse_text = site_cfg.get("1b_individual_reimbursement_text")
+    reimburse_yes = str(site_cfg.get("1a_individual_reimbursement", "no")).lower() == "yes"
+    reimburse_text = site_cfg.get("1a_individual_reimbursement_text")
     if reimburse_yes:
         if not reimburse_text:
             logger.warning(
-                "%s: 1b_individual_reimbursement is 'yes' but 1b_individual_reimbursement_text is missing.",
+                "%s: 1a_individual_reimbursement is 'yes' but 1a_individual_reimbursement_text is missing.",
                 site,
             )
         else:
@@ -202,12 +202,12 @@ def perform_conditional_replacements(
                     )
 
     # 1c: Data protection (responsible person / institution)
-    dpo_yes = str(site_cfg.get("1c_individual_data_protection", "no")).lower() == "yes"
-    dpo_text = site_cfg.get("1c_individual_data_protection_text")
+    dpo_yes = str(site_cfg.get("1b_individual_data_protection", "no")).lower() == "yes"
+    dpo_text = site_cfg.get("1b_individual_data_protection_text")
     if dpo_yes:
         if not dpo_text:
             logger.warning(
-                "%s: 1c_individual_data_protection is 'yes' but 1c_individual_data_protection_text is missing.",
+                "%s: 1b_individual_data_protection is 'yes' but 1b_individual_data_protection_text is missing.",
                 site,
             )
         else:
@@ -241,12 +241,12 @@ def perform_conditional_replacements(
                         )
 
     # 1d: Complaint rights
-    complain_yes = str(site_cfg.get("1d_individual_complain", "no")).lower() == "yes"
-    complain_text = site_cfg.get("1d_individual_complain_text")
+    complain_yes = str(site_cfg.get("1c_individual_complain", "no")).lower() == "yes"
+    complain_text = site_cfg.get("1c_individual_complain_text")
     if complain_yes:
         if not complain_text:
             logger.warning(
-                "%s: 1d_individual_complain is 'yes' but 1d_individual_complain_text is missing.",
+                "%s: 1c_individual_complain is 'yes' but 1c_individual_complain_text is missing.",
                 site,
             )
         else:
@@ -300,10 +300,10 @@ def determine_output_path(
       basename if present or the default filename.
 
     Note: This intentionally ignores any absolute/relative paths specified in
-    '0a_html_consent_form_location' beyond using their basename, so that all
+    '0_html_consent_form_location' beyond using their basename, so that all
     files end up next to the mapping (e.g. 'consent_forms') unless --outdir is used.
     """
-    configured_path = site_cfg.get("0a_html_consent_form_location")
+    configured_path = site_cfg.get("0_html_consent_form_location")
 
     # 1) Explicit output directory (CLI flag takes precedence)
     if outdir:
@@ -387,12 +387,6 @@ def main(argv: Optional[list] = None) -> int:
 
     for site, site_cfg in mapping.items():
         if site.lower() == "default":
-            continue
-
-        complete_flag = str(site_cfg.get("1a_individual_complete_consent_form", "no")).lower()
-        if complete_flag == "yes":
-            print(f"Skipped: {site} (already has complete consent form).")
-            skipped_count += 1
             continue
 
         # Build individualized content by applying conditional replacements
