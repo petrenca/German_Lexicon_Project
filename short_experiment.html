@@ -931,9 +931,14 @@ fetch("consent_forms/combined_mapping.json")
     if (uniData["2_individual_completion_sentence"] === "yes") {
       let text = uniData["2_individual_completion_sentence_text"] || "";
 
-      // ✅ NEW: replace survey_code value with sonaParam (if present)
+      // SONA CODE: replace survey_code value with sonaParam (if present)
       if (sonaParam && text.includes("survey_code=")) {
         text = text.replace(/(survey_code=)[^&\s'"]*/i, '$1' + sonaParam);
+      }
+
+      // GOETTINGEN CODE: replace %TEILNAHMECODE% with the jsPsych-generated completion code
+      if (uniParam === "goettingen" && text.includes("%TEILNAHMECODE%")) {
+       text = text.replace("%TEILNAHMECODE%", subject_id);
       }
 
       completionText += `<p>${text}</p>`;
