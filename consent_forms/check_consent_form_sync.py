@@ -1,5 +1,5 @@
 """
-Utility script to check that consent form HTML files are in sync across:
+Utility script to check that consent form files are in sync across:
 
 1) GitHub repo: petrenca/German_Lexicon_Project (consent_forms/)
 2) GitHub repo: schiekiera/German_Lexicon_Project (consent_forms/)
@@ -8,7 +8,8 @@ Utility script to check that consent form HTML files are in sync across:
 The script performs two checks:
 
 1. Filename presence:
-   - Retrieve the list of *.html files from each of the three locations.
+   - Retrieve the list of files with extensions
+     *.html, *.json, *.py from each of the three locations.
    - Compare filenames across sources.
    - Print all files that are missing from at least one location,
      indicating for each file where it is present/absent.
@@ -34,6 +35,8 @@ from typing import Dict, List, Set
 from urllib.error import URLError, HTTPError
 from urllib.request import urlopen, Request
 import difflib
+
+FILE_EXTENSIONS = (".html", ".json", ".py")
 
 # Directory listing URLs (for reference / documentation)
 github_url_petrenca = (
@@ -84,8 +87,8 @@ def _http_get(url: str) -> bytes:
 
 def list_github_html_files(api_url: str, source_name: str) -> SourceListing:
     """
-    Use GitHub API to list *.html files in consent_forms/ for a given repo.
-    Only returns top-level files (no recursion).
+    Use GitHub API to list relevant files in consent_forms/ for a given repo.
+    Relevant = files ending with FILE_EXTENSIONS (top-level only, no recursion).
     """
     raw = _http_get(api_url)
     try:
@@ -96,13 +99,15 @@ def list_github_html_files(api_url: str, source_name: str) -> SourceListing:
     filenames: Set[str] = set()
     if isinstance(data, list):
         for item in data:
-            if (
-                isinstance(item, dict)
-                and item.get("type") == "file"
-                and isinstance(item.get("name"), str)
-                and item["name"].lower().endswith(".html")
-            ):
-                filenames.add(item["name"])
+            if not isinstance(item, dict):
+                continue
+            if item.get("type") != "file":
+                continue
+            name = item.get("name")
+            if not isinstance(name, str):
+                continue
+            if name.lower().endswith(FILE_EXTENSIONS):
+                filenames.add(name)
     else:
         raise RuntimeError(
             f"Unexpected JSON structure from GitHub API at {api_url!r} "
@@ -114,14 +119,17 @@ def list_github_html_files(api_url: str, source_name: str) -> SourceListing:
 
 def list_hu_html_files(listing_url: str) -> SourceListing:
     """
-    Retrieve the directory listing from the HU server and extract *.html filenames.
+    Retrieve the directory listing from the HU server and extract
+    filenames with extensions in FILE_EXTENSIONS.
     Assumes a simple index page with links like href="consent_form_xxx.html".
     """
     html = _http_get(listing_url).decode("utf-8", errors="replace")
 
-    # Very simple href matcher for .html files (relative links).
+    # Very simple href matcher for relevant files (relative links).
     # This deliberately ignores absolute URLs and anchors.
-    candidates = re.findall(r'href=["\']([^"\']+\.html)["\']', html, flags=re.IGNORECASE)
+    candidates = re.findall(
+        r'href=["\']([^"\']+\.(?:html|json|py))["\']', html, flags=re.IGNORECASE
+    )
 
     # Normalize: take only basename portion (strip possible paths)
     filenames = {c.split("/")[-1] for c in candidates}
@@ -157,8 +165,11 @@ def print_text_diff(
     label_a: str,
     label_b: str,
     max_lines: int = 80,
-) -> None:
-    """Print a human-readable unified diff between two HTML files."""
+) -> int:
+    """
+    Print a human-readable unified diff between two text files.
+    Returns the number of diff lines printed (0 = no visible textual diff).
+    """
     # Decode as UTF-8, but don't crash if something is weird
     text_a = a.decode("utf-8", errors="replace").splitlines(keepends=False)
     text_b = b.decode("utf-8", errors="replace").splitlines(keepends=False)
@@ -172,8 +183,8 @@ def print_text_diff(
         n=3,  # 3 context lines around changes
     )
 
-    print(f"    --- Diff between {label_a} and {label_b} ---")
     line_count = 0
+    print(f"    --- Diff between {label_a} and {label_b} ---")
     for line in diff_iter:
         print(f"      {line}")
         line_count += 1
@@ -181,8 +192,7 @@ def print_text_diff(
             print("      ... (diff truncated) ...")
             break
 
-    if line_count == 0:
-        print("      (no textual differences detected)")
+    return line_count
 
 def main() -> None:
     print("=== 1) Collecting filename listings ===")
@@ -203,10 +213,10 @@ def main() -> None:
         | hu_listing.filenames
     )
 
-    print(f"  petrenca  : {len(petrenca_listing.filenames)} HTML files")
-    print(f"  schiekiera: {len(schiekiera_listing.filenames)} HTML files")
-    print(f"  hu_server : {len(hu_listing.filenames)} HTML files")
-    print(f"  union     : {len(all_filenames)} distinct HTML filenames\n")
+    print(f"  petrenca  : {len(petrenca_listing.filenames)} files")
+    print(f"  schiekiera: {len(schiekiera_listing.filenames)} files")
+    print(f"  hu_server : {len(hu_listing.filenames)} files")
+    print(f"  union     : {len(all_filenames)} distinct filenames\n")
 
     # --- 1) Filename presence differences ---
     print("=== 2) Filenames missing from at least one location ===")
@@ -238,6 +248,8 @@ def main() -> None:
     print(f"  Files present in all three locations: {len(common_filenames)}\n")
 
     any_diff = False
+    text_diff_files = 0
+    text_identical_files = 0
 
     for fname in sorted(common_filenames):
         contents: Dict[str, bytes] = {}
@@ -252,38 +264,65 @@ def main() -> None:
             contents[src] = data
             hashes[src] = compute_hash(data) if data else "ERROR"
 
-        # Group sources by hash to detect which are identical
-        groups: Dict[str, List[str]] = {}
-        for src, h in hashes.items():
-            groups.setdefault(h, []).append(src)
+        # If all hashes match (and are not ERROR), we consider the file identical.
+        unique_hashes = {h for h in hashes.values() if h != "ERROR"}
+        if len(unique_hashes) <= 1:
+            text_identical_files += 1
+            continue
 
-        if len(groups) > 1:
-            any_diff = True
-            print(f"  DIFF in {fname}:")
-            for h, src_list in groups.items():
-                print(f"    hash={h}: {', '.join(sorted(src_list))}")
+        # Compare all pairs (petrenca vs schiekiera, petrenca vs hu_server,
+        # schiekiera vs hu_server) and only print when there is a textual diff.
+        file_has_text_diff = False
 
-            # Try to show a human-readable diff as well.
-            # Use 'petrenca' as the reference if available.
-            ref_source = "petrenca" if "petrenca" in contents else next(iter(contents))
-            ref_content = contents[ref_source]
+        source_names = list(sources.keys())
+        num_sources = len(source_names)
 
-            for other_source, other_content in contents.items():
-                if other_source == ref_source:
+        for i in range(num_sources):
+            for j in range(i + 1, num_sources):
+                src_a = source_names[i]
+                src_b = source_names[j]
+
+                # Skip if one of the contents could not be fetched
+                if hashes[src_a] == "ERROR" or hashes[src_b] == "ERROR":
                     continue
-                if hashes[other_source] == hashes[ref_source]:
-                    continue  # identical, no need to diff
 
-                print_text_diff(
-                    ref_content,
-                    other_content,
-                    label_a=f"{ref_source}::{fname}",
-                    label_b=f"{other_source}::{fname}",
+                # Skip if byte-identical
+                if hashes[src_a] == hashes[src_b]:
+                    continue
+
+                diff_lines = print_text_diff(
+                    contents[src_a],
+                    contents[src_b],
+                    label_a=f"{src_a}::{fname}",
+                    label_b=f"{src_b}::{fname}",
                     max_lines=80,
                 )
 
+                if diff_lines > 0:
+                    if not file_has_text_diff:
+                        if not any_diff:
+                            # First time we encounter any textual difference, print a blank line
+                            # to visually separate from the header.
+                            print()
+                        print(f"  Textual differences in {fname}:")
+                        file_has_text_diff = True
+                        any_diff = True
+
+        if file_has_text_diff:
+            text_diff_files += 1
+        else:
+            # Binary differences but no visible textual differences
+            text_identical_files += 1
+
     if not any_diff:
-        print("  All common files are byte-identical across all three locations.")
+        print("  No textual differences in files present in all three locations.")
+    else:
+        total_compared = len(common_filenames)
+        print(
+            f"\nSummary: {total_compared} files compared, "
+            f"{text_diff_files} with textual differences, "
+            f"{text_identical_files} without textual differences."
+        )
 
 
 if __name__ == "__main__":
