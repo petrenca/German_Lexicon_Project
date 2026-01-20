@@ -78,14 +78,14 @@
     },
   "leipzig": {
     "0_html_consent_form_location": "consent_forms/consent_form_leipzig.html",
-    "1a_individual_reimbursement": "yes",
-    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 Versuchspersonenstunde pro Stunde. Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung. Bitte setzen Sie sich hierzu mit dem Projektverantwortlichen der Studie in Kontakt.</p>",
+    "1a_individual_reimbursement": "no",
+    "1a_individual_reimbursement_text": "<p>Für die Vergabe einer VP-Stunde im STS schreiben Sie bitte eine Mail mit dem Keyword 'Sprache' an jascha.ruesseler@uni-bamberg.de</p>",
     "1b_individual_data_protection": "no",
     "1b_individual_data_protection_text": null,
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
-    "2_individual_completion_sentence": "no",
-    "2_individual_completion_sentence_text": null
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "<p><p>Bitte senden Sie diesen Code <strong> survey_code=XXXX </strong> zusammen mit Ihrem vollständigen Namen an <strong> kogexp@psychologie.uni-leipzig.de </strong> mit dem Betreff <strong> 'Vergütung German Lexicon Project'. </strong> Diese Informationen werden zur Quittierung Ihrer Aufwandsentschädigung verwendet und direkt danach gelöscht. Bitte denken Sie daran, Ihre Teilnahme von einem Mitarbeitenden der Arbeitsgruppe Kognitionspsychologie an Ihrer Universität quittieren zu lassen.</p>"
   },
 "goettingen": {
     "0_html_consent_form_location": "consent_forms/consent_form_goettingen.html",
@@ -208,17 +208,18 @@
     "2_individual_completion_sentence": "no",
     "2_individual_completion_sentence_text": null
   },
-  "erfurt": {
+   "erfurt": {
     "0_html_consent_form_location": "consent_forms/consent_form_erfurt.html",
     "1a_individual_reimbursement": "yes",
-    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 Versuchspersonenstunde pro Stunde.</p>",
-    "1b_individual_data_protection": "no",
-    "1b_individual_data_protection_text": null,
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von 1 VP-Stunde. Dafür müssen Sie auf den Abschluss-Link ganz am Ende der Studie klicken. Bei vorzeitigem Abbruch ist leider keine Aufwandsentschädigung möglich. Bei Problemen setzen Sie sich bitte mit den Projektverantwortlichen der Studie in Kontakt.</p>",
+    "1b_individual_data_protection": "yes",
+    "1b_individual_data_protection_text": "<p>Verantwortliche an der Universität Erfurt:<br>Dr. Jana Hasenäcker<br>Philosophische Fakultät<br>Seminar für Sprachwissenschaft<br>Angewandte Linguistik/Psycholinguistik<br>Nordhäuser Str. 63, 99089 Erfurt<br>Telefon: 0361 737-4315<br> E-Mail: <a href='mailto:jana.hasenaecker@uni-erfurt.de'> jana.hasenaecker@uni-erfurt.de</a></p><p>Kooperationspartner und Verantwortlicher für Datenschutz:<br>Humboldt-Universität zu Berlin<br>Lebenswissenschaftliche Fakultät<br>Institut für Psychologie<br>Nachwuchsgruppe „Komputationelle Modellierungen“<br>Unter den Linden 6, 10099 Berlin<br>Dr. Fritz Günther<br>Telefon: 030 2093-9340<br>E-Mail: <a href='mailto:fritz.guenther@hu-berlin.de'>fritz.guenther@hu-berlin.de</a></p>",
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
-    "2_individual_completion_sentence": "no",
-    "2_individual_completion_sentence_text": null
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "<p>Vielen Dank für Ihre Teilnahme!</p><p>Bitte klicken Sie diesen <a href='https://erfurt-lab.sona-systems.com/webstudy_credit.aspx?experiment_id=62&credit_token=e1f5ee7711d3452588bf11b009ed05ce&survey_code=XXXX' target='_blank'>Link</a> um Ihre Teilnahme abzuschließen und Ihre VP-Stunde zu erhalten."
   },
+
   "potsdam": {
     "0_html_consent_form_location": "consent_forms/consent_form_potsdam.html",
     "1a_individual_reimbursement": "no",
@@ -255,13 +256,13 @@
   "frankfurt_sona": {
     "0_html_consent_form_location": "consent_forms/consent_form_frankfurt_sona.html",
     "1a_individual_reimbursement": "yes",
-    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Versuchspersonenstunde.</p>",
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme 60 Versuchspersonenminuten (VPM).</p></p>",
     "1b_individual_data_protection": "no",
     "1b_individual_data_protection_text": null,
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
-    "2_individual_completion_sentence_text": "<p>Klicken Sie auf diesen <a href='S O N A L I N K' target='_blank'>Link</a>, um Ihre Versuchspersonenstunden zu erhalten."
+    "2_individual_completion_sentence_text": "<p>Klicken Sie auf diesen <a href='https://uni-frankfurt.sona-systems.com/webstudy_credit.aspx?experiment_id=1076&credit_token=3fc48a0fed924033922a4cf669580aba&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Versuchspersonenminuten (VPM) zu erhalten."
 
   },
   "frankfurt_prolific": {
@@ -274,5 +275,17 @@
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
     "2_individual_completion_sentence_text": "<p>Klicken Sie auf diesen <a href='P R O L I F I C L I N K' target='_blank'>Link</a>, um Ihre Vergütung auf Prolific zu erhalten."
+  }
+  ,
+  "koeln": {
+    "0_html_consent_form_location": "consent_forms/consent_form_koeln.html",
+    "1a_individual_reimbursement": "no",
+    "1a_individual_reimbursement_text": null,
+    "1b_individual_data_protection": "no",
+    "1b_individual_data_protection_text": null,
+    "1c_individual_complain": "no",
+    "1c_individual_complain_text": null,
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "<p>Klicken Sie auf diesen <a href='https://www.psytoolkit.org/c/3.6.5/survey?s=af7yG' target='_blank'>Link</a>, um Ihre Vergütung zu erhalten."
   }
 }
