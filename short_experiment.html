@@ -157,7 +157,7 @@
     }
 
     /* ----------------------- 2) ID MANAGEMENT ---------------------------- */
-    ID = getID("ID_management/manageID_test.php"); //change to manageID.php for the actual experiment 
+    ID = getID("ID_management/manageID.php"); //change to manageID.php for the actual experiment 
 
     /* ----------------------- 3) STIMULUS PREP ---------------------------- */
     // Add itemcount to each stimulus
@@ -166,7 +166,7 @@
     });
 
     // Calculate which slice of the full stimulus list a given participant should receive, based on their participant ID
-    const items_per_participant = 20; //change to 1250 for the actual experiment
+    const items_per_participant = 1250; //change to 1250 for the actual experiment
     const start_index = (ID - 1) * items_per_participant;
     const end_index = start_index + items_per_participant;
 
@@ -203,7 +203,7 @@
     function saveData(name, data) {
       const folderName = uniParam;
 
-      return fetch('save_data_test.php', { //changeto save_data.php for the actual experiment
+      return fetch('save_data.php', { //changeto save_data.php for the actual experiment
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -249,7 +249,7 @@
 
     //SAVE THE RANDOMLY GEERATED CODE FOR GOETTINGEN
     function saveGoettingenCode(code) {
-      return fetch('save_goettingen_code_test.php', { //change to save_goettingen_code.php for the actual experment
+      return fetch('save_goettingen_code.php', { //change to save_goettingen_code.php for the actual experment
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -729,7 +729,7 @@
 
           // Timeline array
           var main_timeline = [];
-          const break_interval = 5; // update this if your block size is different -//change to 125 for the actualexperiment
+          const break_interval = 125; // update this if your block size is different -//change to 125 for the actualexperiment
 
           for (let i = 0; i < randomized_stimuli.length; i++) {
             // Add main trial block
@@ -761,7 +761,7 @@
           var questionnaire_intro = {
             type: jsPsychHtmlKeyboardResponse,
             stimulus: function () {
-              var break_interval = 5; // update this if your block size is different -//change to 125 for the actualexperiment
+              var break_interval = 125; // update this if your block size is different -//change to 125 for the actualexperiment
               var main_data = jsPsych.data.get().filter({ task: 'main' }).last(break_interval);
               var correct_trials = main_data.filter({ correct: true });
               var total_trials = main_data.count();
@@ -894,7 +894,7 @@
             $.ajax({
               type: 'post',
               cache: false,
-              url: 'ID_management/cleanupID_test.php',//change to cleanupID.php for the actual experiment 
+              url: 'ID_management/cleanupID.php',//change to cleanupID.php for the actual experiment 
               data: { ID: code }
             });
           }
@@ -1020,21 +1020,21 @@
 
           //timeline.push(preload);
           timeline.push(enter_fullscreen);
-          /*timeline.push(informed_consent);
+          timeline.push(informed_consent);
           //if (includePersonalCode) timeline.push(personal_code_question);
-          timeline.push(instructions);
-          timeline.push(practice_instructions);*/
+          /*timeline.push(instructions);
+          timeline.push(practice_instructions);
           timeline.push(practice_procedure);
-          /*timeline.push(end_practice);
+          timeline.push(end_practice);
           timeline.push(main_experiment_with_breaks);
           timeline.push(questionnaire_intro);
           timeline.push(demographics);
           timeline.push(country);
           timeline.push(dialect);
-          timeline.push(save_questionnaire_data);*/
+          timeline.push(save_questionnaire_data);
           timeline.push(save_goettingen_completion_code);
           timeline.push(cleanup_routine);
-          timeline.push(debriefing);
+          timeline.push(debriefing);*/
           timeline.push(thankYou);
 
           // Start the experiment
