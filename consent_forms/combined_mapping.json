@@ -252,17 +252,17 @@
     "2_individual_completion_sentence": "yes",
     "2_individual_completion_sentence_text":"<p>Vielen Dank für Ihre Teilnahme!</p><p>Bitte klicken Sie diesen <a href='https://app.prolific.com/submissions/complete?cc=C9KC0ULP' target='_blank'>Link</a>, und Ihre Aufwandsentschädigung zu erhalten.</p>"
   },
-    "potsdam_sona": {
-    "0_html_consent_form_location": "consent_forms/consent_form_potsdam_sona.html",
-    "1a_individual_reimbursement": "no",
-    "1a_individual_reimbursement_text": null,
-    "1b_individual_data_protection": "no",
-    "1b_individual_data_protection_text": null,
-    "1c_individual_complain": "no",
-    "1c_individual_complain_text": null,
-    "2_individual_completion_sentence": "yes",
-    "2_individual_completion_sentence_text":"<p>Vielen Dank für Ihre Teilnahme!</p><p>Bitte klicken Sie diesen <a href='INSERT THE LINK' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
-  },
+"potsdam_sona": {
+"0_html_consent_form_location": "consent_forms/consent_form_potsdam_sona.html",
+"1a_individual_reimbursement": "yes",
+"1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Versuchspersonenstunde.</p>",
+"1b_individual_data_protection": "no",
+"1b_individual_data_protection_text": null,
+"1c_individual_complain": "no",
+"1c_individual_complain_text": null,
+"2_individual_completion_sentence": "yes",
+"2_individual_completion_sentence_text":"<p>Vielen Dank für Ihre Teilnahme!</p><p>Bitte klicken Sie diesen <a href='https://uni-potsdam.sona-systems.com/webstudy_credit.aspx?experiment_id=1624&credit_token=83e3ef38cb3043d78e9142cec928d9bb&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
+},
     
   "mannheim_kognitive_psychologie": {
     "0_html_consent_form_location": "consent_forms/consent_form_mannheim_kognitive_psychologie.html",
