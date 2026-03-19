@@ -342,5 +342,16 @@
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
     "2_individual_completion_sentence_text": "Bitte geben Sie der Versuchsleitung Bescheid."
+  },
+  "graz": {
+    "0_html_consent_form_location": "consent_forms/consent_form_trier.html",
+    "1a_individual_reimbursement": "yes",
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Versuchspersonenstunde gutgeschrieben.</p>",
+    "1b_individual_data_protection": "no",
+    "1b_individual_data_protection_text": null,
+    "1c_individual_complain": "no",
+    "1c_individual_complain_text": null,
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "Bitte geben Sie der Versuchsleitung Bescheid."
   }
 }
