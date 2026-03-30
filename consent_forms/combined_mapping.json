@@ -300,14 +300,14 @@
   },
   "frankfurt_prolific": {
     "0_html_consent_form_location": "consent_forms/consent_form_frankfurt_prolific.html",
-    "1a_individual_reimbursement": "no",
-    "1a_individual_reimbursement_text": null,
+    "1a_individual_reimbursement": "yes",
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von £11 pro Stunde. Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung. Bitte setzen Sie sich hierzu mit dem Projektverantwortlichen der Studie in Kontakt.</p>",
     "1b_individual_data_protection": "no",
     "1b_individual_data_protection_text": null,
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
-    "2_individual_completion_sentence_text": "<p>Klicken Sie auf diesen <a href='P R O L I F I C L I N K' target='_blank'>Link</a>, um Ihre Vergütung auf Prolific zu erhalten."
+    "2_individual_completion_sentence_text": "<p><p>Klicken Sie auf diesen <a href='https://app.prolific.com/submissions/complete?cc=CO2LD3NR' target='_blank'>Link</a>, um Ihre Vergütung auf Prolific zu erhalten."
   }
   ,
   "koeln": {
