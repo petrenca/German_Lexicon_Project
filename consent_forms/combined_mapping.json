@@ -186,17 +186,6 @@
     "2_individual_completion_sentence": "yes",
     "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://rwth-aachen.sona-systems.com/webstudy_credit.aspx?experiment_id=192&credit_token=0d0b9c23bbdb4d8f9cc1a56b3da82f05&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihren VP-Stundencode zu erhalten.</p>"
   },
-  "lueneburg": {
-    "0_html_consent_form_location": "consent_forms/consent_form_lueneburg.html",
-    "1a_individual_reimbursement": "no",
-    "1a_individual_reimbursement_text": null,
-    "1b_individual_data_protection": "no",
-    "1b_individual_data_protection_text": null,
-    "1c_individual_complain": "no",
-    "1c_individual_complain_text": null,
-    "2_individual_completion_sentence": "no",
-    "2_individual_completion_sentence_text": null
-  },
   "marburg": {
     "0_html_consent_form_location": "consent_forms/consent_form_marburg.html",
     "1a_individual_reimbursement": "yes",
@@ -349,7 +338,7 @@
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
-    "2_individual_completion_sentence_text": "</p><p>Bitte klicken Sie diesen <a href='https://uni-potsdam.sona-systems.com/webstudy_credit.aspx?experiment_id=1634&credit_token=e1fbf7ebad0341afb21d5be6e1ac9b82&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
+    "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://uni-potsdam.sona-systems.com/webstudy_credit.aspx?experiment_id=1634&credit_token=e1fbf7ebad0341afb21d5be6e1ac9b82&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
   },
   "ulm": {
     "0_html_consent_form_location": "consent_forms/consent_form_ulm.html",
@@ -360,7 +349,7 @@
     "1c_individual_complain": "no",
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
-    "2_individual_completion_sentence_text": "</p><p>Bitte klicken Sie diesen <a href='https://uulm.sona-systems.com/webstudy_credit.aspx?experiment_id=1553&credit_token=fc4c094ec03647afb623482c4d569c73&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
+    "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://uulm.sona-systems.com/webstudy_credit.aspx?experiment_id=1553&credit_token=fc4c094ec03647afb623482c4d569c73&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
   },
   "zurich": {
     "0_html_consent_form_location": "consent_forms/consent_form_zurich.html",
@@ -438,5 +427,27 @@
     "1c_individual_complain_text": null,
     "2_individual_completion_sentence": "yes",
     "2_individual_completion_sentence_text": "<p><p>Klicken Sie auf diesen <a href='L I N K' target='_blank'>Link</a>, um Ihre Vergütung zu erhalten."
+  },
+  "lueneburg_credit": {
+    "0_html_consent_form_location": "consent_forms/consent_form_lueneburg_credit.html",
+    "1a_individual_reimbursement": "yes",
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme 1 Versuchspersonenstunde. Diese wird Ihnen nach Abschluss der Studie automatisch in SONA gutgeschrieben.</p>",
+    "1b_individual_data_protection": "yes",
+    "1b_individual_data_protection_text": "<p>Leuphana Universität Lüneburg<br>Datenschutzbeauftragte*r<br>Universitätsallee 1, 21335 Lüneburg<br>E-Mail: <a href='mailto:dsb@leuphana.de'>dsb@leuphana.de</a></p>",
+    "1c_individual_complain": "yes",
+    "1c_individual_complain_text": "<p>Sie haben das Recht, Beschwerde bei einer mitgliedstaatlichen Aufsichtsbehörde einzulegen, wenn Zweifel an der Rechtmäßigkeit der Verarbeitung der Sie betreffenden personenbezogenen Daten bestehen. Unmittelbar für die Leuphana Universität Lüneburg zuständig ist die Landesbeauftragte für den Datenschutz Niedersachen (Prinzenstraße 5, 30159 Hannover, <a href='mailto:poststelle@lfd.niedersachsen.de'>poststelle@lfd.niedersachsen.de</a>). Unbeschadet dieses Beschwerderechts können Sie sich bei datenschutzrechtlichen Fragen jederzeit an die*den Datenschutzbeauftragte*n der Leuphana Universität Lüneburg wenden: <a href='mailto:dsb@leuphana.de'>dsb@leuphana.de</a>. Auf anonymisierte Daten sind die genannten Rechte grundsätzlich nicht anwendbar, da diese nicht mehr mit Ihrer Person in Verbindung gebracht werden können.</p> <p>Um die oben genannten Rechte in Anspruch zu nehmen, wenden Sie sich bitte an <strong>Prof. Dr. Sebastian Wallot</strong> (Leuphana Universität Lüneburg, Institut für Nachhaltigkeitspsychologie, Arbeitsgruppe für Forschungsmethoden und Evaluation): <a href='mailto:sebastian.wallot@leuphana.de'>sebastian.wallot@leuphana.de</a>.</p>",
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://leuphana.sona-systems.com/webstudy_credit.aspx?experiment_id=846&credit_token=f5d43a84ab4449f5b3307cfb77ebb4a9&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
+  },
+  "lueneburg_paid": {
+    "0_html_consent_form_location": "consent_forms/consent_form_lueneburg_paid.html",
+    "1a_individual_reimbursement": "yes",
+    "1a_individual_reimbursement_text": "<p>Sie erhalten für Ihre Teilnahme eine Aufwandsentschädigung in Höhe von max. 14,00 € (3,50 € je Viertelstunde). Bei vorzeitigem Abbruch erhalten Sie eine anteilige Vergütung. Bitte setzen Sie sich hierzu mit der projektverantwortlichen Person in Kontakt.</p>",
+    "1b_individual_data_protection": "yes",
+    "1b_individual_data_protection_text": "<p>Leuphana Universität Lüneburg<br>Datenschutzbeauftragte*r<br>Universitätsallee 1, 21335 Lüneburg<br>E-Mail: <a href='mailto:dsb@leuphana.de'>dsb@leuphana.de</a></p>",
+    "1c_individual_complain": "yes",
+    "1c_individual_complain_text": "<p>Sie haben das Recht, Beschwerde bei einer mitgliedstaatlichen Aufsichtsbehörde einzulegen, wenn Zweifel an der Rechtmäßigkeit der Verarbeitung der Sie betreffenden personenbezogenen Daten bestehen. Unmittelbar für die Leuphana Universität Lüneburg zuständig ist die Landesbeauftragte für den Datenschutz Niedersachen (Prinzenstraße 5, 30159 Hannover, <a href='mailto:poststelle@lfd.niedersachsen.de'>poststelle@lfd.niedersachsen.de</a>). Unbeschadet dieses Beschwerderechts können Sie sich bei datenschutzrechtlichen Fragen jederzeit an die*den Datenschutzbeauftragte*n der Leuphana Universität Lüneburg wenden: <a href='mailto:dsb@leuphana.de'>dsb@leuphana.de</a>. Auf anonymisierte Daten sind die genannten Rechte grundsätzlich nicht anwendbar, da diese nicht mehr mit Ihrer Person in Verbindung gebracht werden können.</p> <p>Um die oben genannten Rechte in Anspruch zu nehmen, wenden Sie sich bitte an <strong>Prof. Dr. Sebastian Wallot</strong> (Leuphana Universität Lüneburg, Institut für Nachhaltigkeitspsychologie, Arbeitsgruppe für Forschungsmethoden und Evaluation): <a href='mailto:sebastian.wallot@leuphana.de'>sebastian.wallot@leuphana.de</a>.</p>",
+    "2_individual_completion_sentence": "yes",
+    "2_individual_completion_sentence_text": "<p>Bitte klicken Sie diesen <a href='https://leuphana.sona-systems.com/webstudy_credit.aspx?experiment_id=848&credit_token=69bb3c3d08ac4ba0ac819deb9c39a2ba&survey_code=XXXX' target='_blank'>Link</a>, um Ihre Teilnahme abzuschließen und Ihre Aufwandsentschädigung zu erhalten.</p>"
   }
 }
